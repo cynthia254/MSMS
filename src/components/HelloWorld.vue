@@ -37,13 +37,15 @@
       <a href="#">Orders</a>
       <a href="#">Wishlist</a>
       <li class="dropdown-submenu">
-      <a class="dropbtn">LogIn/SignUp
+     <router-link to="/supplierRegistration"> <a class="dropbtn">LogIn/SignUp
      
-      </a>
-        <ul class="dropdown-menu">
-                <li><router-link to="/supplierRegistration" tabindex="-1" href="#">As Supplier</router-link></li>
-                <li><a href="#">As Customer</a></li>
-              </ul>
+      </a></router-link>
+       <!--
+<ul class="dropdown-menu">
+  <li><router-link to="/supplierRegistration" tabindex="-1" href="#">As Supplier</router-link></li>
+  <li><a href="#">As Customer</a></li>
+</ul>
+-->
           
     
     </li>
@@ -370,13 +372,14 @@
 
 <h1 class="title section2-header">DEALS OF THE DAY <span id="timer"><i class="fa fa-clock-o"></i></span></h1>
 <section class="section2">
-<div class="deal-card">
+  <div class="deal-card">
 <img src="../assets/dufflebags.jpg" alt="Deals">
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
-<span class="tag-2"><i class="fa fa-times"></i> Sold Out</span>
-<span class="title">Travel Bag </span>
-<span class="sub-title">African Waterproof Travel Bag </span>
-<a href="#" class="btn1 soldout">SoldOut</a>
+<span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
+<span class="title">Tote Bags</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Stahi Kenya</a>
+<span class="sub-title">Get Tote Bags At An Affordable Price </span>
+<a href="#" class="btn1">$ 5999</a>
 </div>
 
 <div class="deal-card">
@@ -384,6 +387,7 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Bluetooth Speakers</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">QhM Stores</a>
 <span class="sub-title">Bluetooth speakers at an affordable price buy it now for efficient of communication </span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
@@ -393,16 +397,17 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Iphone 12 Pro Max</span>
-<span class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Iphone Street Ke</a>
+<span class="sub-title">Iphone at an affordable price buy it now for efficient of communication </span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
-
 <div class="deal-card">
 <img src="../assets/paints.jpg" alt="Deals">
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Paints</span>
-<span class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Muthokinju Paints</a>
+<span class="sub-title">Colour your house with our paints at an affordable price</span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
 
@@ -411,6 +416,7 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Sneakers</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Glam Shoes Ke</a>
 <span class="sub-title">Get Sneakers at a discount </span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
@@ -420,6 +426,7 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Chain</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Bracelet Accesories</a>
 <span class="sub-title">Bryzantine Box Chain.</span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
@@ -428,6 +435,7 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Kit</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">Steark Kenya</a>
 <span class="sub-title">Pink Cleaning Kit.</span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
@@ -436,6 +444,7 @@
 <span class="discount"><i class="fa fa-percentage"></i> 20% OFF</span>
 <span class="tag-1"><i class="fa fa-check-circle-o"></i> Available</span>
 <span class="title">Watch</span>
+<a href="#" class="" style="text-decoration: underline;color: blue;font-size: 14px;">QhM Stores</a>
 <span class="sub-title">Citizen eco drive.</span>
 <a href="#" class="btn1">$ 5999</a>
 </div>
@@ -691,7 +700,6 @@
 <section class="section6">
 <table>
 <tr>
-     <!-- This is an image of the app -->
 <td>
 <img src="../assets/feitianf29.jpg" alt="APP" style="background: orange;">
 </td>
@@ -2004,7 +2012,7 @@ height:50vh;
 position:absolute;
 bottom:0;
 margin-right:auto;
-margin-left:auto;
+margin-left:300px;
 pointer-events:none;
 }
 

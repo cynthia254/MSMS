@@ -31,7 +31,7 @@
                         </svg>                       
                         <span>Analytics</span>
                     </li>
-                    <li class="side-nav__item">
+                   <router-link to="/invoices"> <li class="side-nav__item">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.1668 9.66671V14.25C20.1668 18.8334 18.3335 20.6667 13.7502 20.6667H8.25016C3.66683 20.6667 1.8335 18.8334 1.8335 14.25V8.75004C1.8335 4.16671 3.66683 2.33337 8.25016 2.33337H12.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M20.1668 9.66671H16.5002C13.7502 9.66671 12.8335 8.75004 12.8335 6.00004V2.33337L20.1668 9.66671Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -39,7 +39,7 @@
                             <path d="M6.4165 16.0834H10.0832" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                        
                         <span>Invoices</span>
-                    </li>
+                    </li></router-link>
                     <li class="side-nav__item">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.90576 7.32001L10.9999 12.0042L19.0391 7.34748" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,7 +47,8 @@
                             <path d="M9.10256 2.77331L4.20757 5.49584C3.0984 6.11001 2.19092 7.64999 2.19092 8.91499V14.0942C2.19092 15.3592 3.0984 16.8992 4.20757 17.5133L9.10256 20.2359C10.1476 20.8134 11.8617 20.8134 12.9067 20.2359L17.8017 17.5133C18.9109 16.8992 19.8184 15.3592 19.8184 14.0942V8.91499C19.8184 7.64999 18.9109 6.11001 17.8017 5.49584L12.9067 2.77331C11.8526 2.18665 10.1476 2.18665 9.10256 2.77331Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M15.5834 12.6366V9.28167L6.88428 4.2583" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                        
-                        <span>Products</span>
+                        <router-link to="/products"
+                        ><span>Products</span></router-link>
                     </li>
                     <li class="side-nav__item">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +137,7 @@
             </ul>            
         </nav>
 
-        <main class="main-content">
+        <main class="main-content" style="margin-left:270px">
             <div class="top-container">
                 <div action="#" class="search" style="
     display: flex;
@@ -175,7 +176,7 @@
                             <rect width="24" height="24" fill="white" fill-opacity="0.01"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM12.0321 19C8.67459 19 6.80643 17.2316 6.80643 14V13H17.1158L17.1434 13.9715C17.2358 17.2145 15.4003 19 12.0321 19ZM15.0875 15C14.8526 16.3955 13.9089 17 12.0321 17C10.1563 17 9.18179 16.3902 8.89677 15H15.0875ZM14 8H17V10H14V8ZM10 8H7V10H10V8Z" fill="black"/>
                         </svg>
-                        <span class="user-name">Cynthia M.</span>                        
+                        <span class="user-name">{{LoggedInUser.userName}}</span>                        
                     </div>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5999 7.45837L11.1666 12.8917C10.5249 13.5334 9.4749 13.5334 8.83324 12.8917L3.3999 7.45837" stroke="#596780" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -227,7 +228,7 @@
                                     <path d="M21 12.5V29.33" stroke="#FF4423" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>                                                                    
                             </div>
-                            <h1 class="price">$50,530.00<span class="price-currency">(USD)</span></h1>                            
+                            <h1 class="price">$10,530.00<span class="price-currency">(USD)</span></h1>                            
                             <p><span class="percentage-decrease">10%</span> decrease compared to last week</p>
                         </div>
                     </div>
@@ -247,7 +248,7 @@
                                     <path d="M6.22049 10.275H6.22723" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M6.22049 12.525H6.22723" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>1 Jan - 1 Feb 2022</span>       
+                                <span>1 Jan - 1 Feb 2024</span>       
                             </div>                                
                         </div>
                         <table class="transaction-history">
@@ -277,7 +278,7 @@
                                                                         
                                     Tote Bags
                                 </td>
-                                <td>Jan 01,2022</td>
+                                <td>Jan 01,2024</td>
                                 <td>4</td>
                                 <td>$2,000.00</td>
                               
@@ -295,7 +296,7 @@
                                                                         
                                     Leather Bags
                                 </td>
-                                <td>Jan 01,2022</td>
+                                <td>Jan 01,2024</td>
                                 <td>10</td>
                                 <td>$2,000.00</td>
                                
@@ -313,7 +314,7 @@
                                                                         
                                     Tote Bags
                                 </td>
-                                <td>Jan 01,2022</td>
+                                <td>Jan 01,2024</td>
                                 <td>4</td>
                                 <td>$2,000.00</td>
                                 <td>
@@ -400,17 +401,40 @@
 <script>
 import BarChart from '@/components/barchart.vue';
 import  PieChart from '@/components/piechart.vue';
+import AppMixins from "../components/Mixins/shared"
                      
 
 export default {
   components: {
     BarChart,
     PieChart,
+ 
   },
   name:'supplierDashboard',
+  mixins: [AppMixins],
   data() {
     return {
+        LoggedInUser:{},
     }
+
+    },
+    methods: {
+  async gettingLoggedInUser(){
+  
+  const response= await this.GettingLoggedInUser();
+  this.LoggedInUser=response.body;
+  
+  
+  
+  
+  
+  console.log("Logged in user: ", this.LoggedInUser);
+  return response;
+  
+  },
+    },
+    created(){
+      this.gettingLoggedInUser();
     },
 }
 
@@ -488,13 +512,21 @@ export default {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
 }
+  
 
 
 /* -------------- SIDEBAR -------------- */
 .sidebar {
+    position: fixed;
     width: 240px;
     top: 0;
     left: 0;
+        height: 100%;
+        width: 240px; /* Adjust as needed */
+        background-color: #fff; /* Sidebar background color */
+        border-right: 1px solid #ccc; /* Sidebar border */
+        overflow-y: auto; /* Enable vertical scroll if needed */
+        padding-top: 20px; /* Adjust top padding */
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -504,6 +536,7 @@ export default {
     overflow-x: auto;
     background-color: #fafafa;
     z-index: 1000; 
+    overflow-y: auto;
 }
 
 
@@ -513,6 +546,7 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
 
 .sidebar__logo-header {
     margin-left: 14px;
@@ -1018,11 +1052,7 @@ tr > td:first-child {
       gap: 12px;
     }
     
-    .button-box {
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 28px;
-    }
+   
     
     .btn {
         width: 100%;
