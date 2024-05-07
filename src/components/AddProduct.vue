@@ -216,8 +216,10 @@
     <select >
       <option @click="SelectedProducts(product.productID)">Attach To Store</option>
 
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        <option value="option2">Update Stock Quantity</option>
+        <option value="option3">Timelines</option>
+        <option value="option3">Edit Product</option>
+        <option value="option3">Archive Product</option>
     </select>
 </td>
 <transition name="popup">
