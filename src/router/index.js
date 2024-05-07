@@ -12,6 +12,7 @@ import AdminRegistration from '@/components/AdminRegistration.vue'
 import ProductPage from '@/components/AddProduct.vue'
 import StorePage from'@/components/AddingStores.vue'
 import SubCategoryPage from '@/components/AddingSubCategories.vue'
+import ViewStorePage from '@/components/ViewStore.vue'
 const routes = [
   {
     path:'/',
@@ -69,6 +70,12 @@ const routes = [
     name: 'ProductPage',
     component: ProductPage,
   },
+  {
+    path: '/viewStore/:storeId', // Define a dynamic route parameter named storeId
+    name: 'ViewStorePage',
+    component: ViewStorePage,
+  }
+  
 
 ];
 

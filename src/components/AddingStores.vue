@@ -178,8 +178,12 @@
     <tr>
           <td>{{index + 1}}</td>
     
- 
-          <td>{{ product.storeName  }}</td>
+          <td>
+  <a href="#" class="store-link" @click.prevent="redirectToStore(product.storeId)">
+    {{ product.storeName }}
+  </a>
+</td>
+
           <td>{{product.website}}</td>
           <td>{{product.phoneNumber}}</td>
           <td>{{product.location}}</td>
@@ -190,46 +194,13 @@
 
 
           <td style="display: flex; justify-content: space-between">
-     <div class="dropdown" style="width: 200%">
-              <button class="dropbtn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-three-dots"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                  />
-                </svg>
-              </button>
-              <div class="dropdown-content" style="color: blue; width: 50%">
-                <a href="#" @click="viewUseremail(user.email)">User Profile</a>
-                <a href="#" @click="viewUseremails(user.userId)">Edit User</a>
-                <a href="#" @click.prevent="DeleteUser(user.email)"
-                  >Delete User</a
-                >
-                <a href="#" @click.prevent="AssigningRole(user.userId)"
-                  >Assign Role</a
-                >
-                <a href="#" @click="ChangeUserStatus(user.userId)"
-                  >Change User Status</a
-                >
-                <a href="#" @click.prevent="ActivatingUsers(user.email)"
-                  >Activate User</a
-                >
-                <a href="#" @click.prevent="Confirming_emailfn(user.email)"
-                  >Approve New User</a
-                >
-                <a href="#" @click.prevent="MakeUserApprover(user.email)"
-                  >Make  Approver</a
-                >
-              </div>
-            </div>
-            <!-- Add more buttons for other actions -->
-          </td>
+    <select >
+      <option >Edit Store</option>
+
+        <option value="option2">Delete Store</option>
+        <option value="option3">Option 3</option>
+    </select>
+</td>
           <!-- Add more data here -->
         </tr>
        
@@ -411,6 +382,14 @@ export default {
     reader.readAsDataURL(input.files[0]);
   }
 },
+SelectedStore(storeId) {
+  this.showPopUp = true; // Show the pop-up
+  this.formdata.storeId = storeId; // Set the selected product ID
+},
+redirectToStore(storeId) {
+    // Redirect to the view more page with the storeId
+    window.location.href = '/viewStore/' + storeId;
+  },
 
 
 
@@ -520,6 +499,7 @@ async gettingLoggedInUser(){
   
         console.log("Form body: ", this.data_formBody);
         console.log("product id is ",this.data_formBody.productID);
+        this.initDataTable();
         return response;
     } catch (error) {
         console.error("Error fetching products by merchantId:", error);
@@ -645,6 +625,13 @@ async gettingLoggedInUser(){
   margin-left: .1rem;
   margin-right: .1rem;
 }
+.store-link {
+  color: blue; /* Change color to suit your design */
+  text-decoration: underline; /* Underline to signify it's a link */
+  cursor: pointer;
+  width: fit-content; /* Change cursor to pointer on hover */
+}
+
 
 
 </style>

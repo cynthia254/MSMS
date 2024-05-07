@@ -139,5 +139,11 @@ export default {
       var response= await axios.post(`Product/GettingSubCategoryByMerchantID?merchantId=${merchantId}`)
       return response.data;
     },
+    async gettingStoredetails(storeId){
+      this.setAuthHeader();
+
+      var response= await axios.post(`Product/GettingProductForStore?storeId=${storeId}`)
+      return response.data;
+    },
   },
 };

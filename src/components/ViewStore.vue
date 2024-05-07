@@ -5,13 +5,10 @@
     <nav class="sidebar">            
             <div>
                 <div class="sidebar__logo">
-                    <h2 class="sidebar__logo-header">{{  LoggedInUser.companyName}}</h2>    
+                    <h2 class="sidebar__logo-header">MSMS</h2>    
                 </div>
                 <ul class="side-nav">
-                  <span class="side-nav__header">
-  {{ LoggedInUser.categoryName ? LoggedInUser.categoryName.charAt(0).toUpperCase() + LoggedInUser.categoryName.slice(1) : '' }}
-</span>
-
+                    <span class="side-nav__header">General</span>
                     <li class="side-nav__item side-nav__item-active">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.23201 3.4202L9.23239 3.41989C10.2108 2.63408 11.7843 2.63834 12.7781 3.42994C12.7783 3.43005 12.7784 3.43015 12.7785 3.43025L18.7784 8.2301C18.7789 8.23054 18.7795 8.23099 18.78 8.23143C19.1189 8.50835 19.4146 8.94381 19.6058 9.44415C19.7968 9.94409 19.8672 10.4662 19.8014 10.8985L18.6475 17.8037C18.6474 17.8042 18.6473 17.8047 18.6472 17.8052C18.4217 19.0989 17.1608 20.1667 15.8585 20.1667H6.1418C4.81982 20.1667 3.58766 19.1252 3.36227 17.8148C3.36221 17.8145 3.36215 17.8142 3.36209 17.8138L2.20746 10.9043L2.20726 10.9032C2.13345 10.4677 2.19947 9.94466 2.39002 9.44498C2.58055 8.94535 2.87982 8.51038 3.22697 8.2334L3.22784 8.2327L9.23201 3.4202ZM11.0001 18.1876C11.6521 18.1876 12.1876 17.652 12.1876 17.0001V14.2501C12.1876 13.5981 11.6521 13.0626 11.0001 13.0626C10.3482 13.0626 9.81263 13.5981 9.81263 14.2501V17.0001C9.81263 17.652 10.3482 18.1876 11.0001 18.1876Z" fill="currentColor" stroke="currentColor"/>
@@ -47,15 +44,6 @@
                         </svg>                        
                         <span>Products</span>
                     </li>
-                   <router-link to="/subcategory"> <li class="side-nav__item">
-                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.90576 7.32001L10.9999 12.0042L19.0391 7.34748" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M11 20.3092V11.995" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9.10256 2.77331L4.20757 5.49584C3.0984 6.11001 2.19092 7.64999 2.19092 8.91499V14.0942C2.19092 15.3592 3.0984 16.8992 4.20757 17.5133L9.10256 20.2359C10.1476 20.8134 11.8617 20.8134 12.9067 20.2359L17.8017 17.5133C18.9109 16.8992 19.8184 15.3592 19.8184 14.0942V8.91499C19.8184 7.64999 18.9109 6.11001 17.8017 5.49584L12.9067 2.77331C11.8526 2.18665 10.1476 2.18665 9.10256 2.77331Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15.5834 12.6366V9.28167L6.88428 4.2583" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                        <span>Sub-Categories</span>
-                    </li></router-link>
                     <li class="side-nav__item">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.90576 7.32001L10.9999 12.0042L19.0391 7.34748" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,13 +81,12 @@
 </svg> 
                         <span>People &amp; Teams</span>
                     </li>
-                 
-                 <router-link to="/store">   <li class="side-nav__item ">
+                    <li class="side-nav__item ">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.23201 3.4202L9.23239 3.41989C10.2108 2.63408 11.7843 2.63834 12.7781 3.42994C12.7783 3.43005 12.7784 3.43015 12.7785 3.43025L18.7784 8.2301C18.7789 8.23054 18.7795 8.23099 18.78 8.23143C19.1189 8.50835 19.4146 8.94381 19.6058 9.44415C19.7968 9.94409 19.8672 10.4662 19.8014 10.8985L18.6475 17.8037C18.6474 17.8042 18.6473 17.8047 18.6472 17.8052C18.4217 19.0989 17.1608 20.1667 15.8585 20.1667H6.1418C4.81982 20.1667 3.58766 19.1252 3.36227 17.8148C3.36221 17.8145 3.36215 17.8142 3.36209 17.8138L2.20746 10.9043L2.20726 10.9032C2.13345 10.4677 2.19947 9.94466 2.39002 9.44498C2.58055 8.94535 2.87982 8.51038 3.22697 8.2334L3.22784 8.2327L9.23201 3.4202ZM11.0001 18.1876C11.6521 18.1876 12.1876 17.652 12.1876 17.0001V14.2501C12.1876 13.5981 11.6521 13.0626 11.0001 13.0626C10.3482 13.0626 9.81263 13.5981 9.81263 14.2501V17.0001C9.81263 17.652 10.3482 18.1876 11.0001 18.1876Z" fill="currentColor" stroke="currentColor"/>
                         </svg>                       
                         <span>Store</span>
-                    </li></router-link>
+                    </li>
                 </ul>
     
                 <ul class="side-nav">
@@ -144,380 +131,52 @@
             </ul>            
         </nav>
         </div>
+        <div class="container">
+  <div class="" style="display: flex; justify-content: center; margin-left: 10%;">
+    <div class="card" style="width: 45%; margin: 10px; display: flex; flex-direction: column;" v-for="product in this.storeDetailsBody" :key="product.id">
+      <img class="card-img" :src="'data:image/jpeg;base64,' + product.imageUpload" style="width: 100%; height: auto;">
 
-        <div
-    class=""
-    style="
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      align-items: flex-start;
-    "
-  >
-    <div class="users-list">
-  
-    </div>
-    <div class="" style="margin-bottom: 20px; display: flex; justify-content: flex-start;">
-  <button class="button">
-    <i class="fa-solid fa-plus"></i>
-    <span @click="showModal = true">Add new product</span>
-  </button>
-</div>
-
-  </div>
-
-  <div
-    class="table-responsive"
-    style="margin-left: 260px;width: auto;"
-  >
-    <table
-      id="example"
-      class="table  table-bordered"
-      style="margin-top: 10px"
-    >
-      <thead>
-        <tr>
-          <th>Index</th>
-          <th>Image</th>
-          <th>Product Name</th>
-          <th>Product Description</th>
-          <th>Product Type</th>
-          <th>Amount</th>
-          <th>Reorder Level</th> 
-          <th>Quantity</th>
-          <th>Status</th>
-        
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody v-for="(product, index) in data_formBody" v-bind:key="product.productID">
-        <tr>
-          <td>{{index + 1}}</td>
-         <td> <img :src="'data:image/jpeg;base64,' + product.imageUpload" style="width: 100px; height: auto;"></td>
-
-
- 
-          <td>{{ product.productName  }}</td>
-          <td>{{product.productDescription}}</td>
-          <td>{{product.productType}}</td>
-          <td>{{product.currency}} {{product.price}}</td>
-          <td>{{product.product_ReorderLevel}}</td>
-          <td>{{product.stockQuantity}}</td>
-         
-          <td>
-  <button :class="getStatusButtonClass(product.status)">
-    {{ product.status }}
-  </button>
-</td>
-
-
-
-            <td style="display: flex; justify-content: space-between">
-    <select >
-      <option @click="SelectedProducts(product.productID)">Attach To Store</option>
-
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-    </select>
-</td>
-<transition name="popup">
-  <div class="popup-mask" v-if="showPopUp">
-    <div class="popup-wrapper">
-      <div class="popup-dialog">
-        <div class="popup-content" style="max-height: 90vh; overflow-y: auto;">
-          <div class="popup-header" style="display: flex; justify-content: space-between;">
-             <h4 class="popup-title">Attach To Store</h4>
-            <button @click="showPopUp = false" type="btn" class="popup-title">&times;</button>
-          </div>
-<div class="popup-body">
-  <form>
-    <div class="form-group d-flex">
-  
-  <input
-    type="hidden"
-    v-model="formdata.selectedProduct"
-  />
-</div>
-    <div class="form-group d-flex">
-  <label for="storename" class="mr-2" style="width: 120px;">Store Name:</label>
-  <select class="form-control" id="storename" v-model="formdata.storeName" required style="flex: 1; max-width: 200px;">
-    <option value="" disabled selected>Select Store Name</option>
-    <option v-for="store in this.productstore_body"  v-bind:value="store.storeId"
-                          :key="store.storeId">{{ store.storeName }}</option>
- 
-  </select>
-</div>
-
-<div class="form-group d-flex">
-  <label for="productDescription" class="mr-2" style="width: 120px;">Quantity:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="productDescription"
-    placeholder="Enter Quantity"
-    v-model="formdata.storequantity"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-
-
-
-<div class="d-flex justify-content-between">
-
-  <button
-    type="button"
-    class="btn btn-secondary"
-    style=""
-    @click.prevent="cancelAdding()"
-  >
-    Cancel
-  </button>
-  <button
-    type="submit"
-    class="btn btn-primary"
-    style=""
-    @click.prevent="AttachingProductToStore()"
-  >
-    Attach To Store
-  </button>
-</div>
-
-  </form>
-</div>
-
-          </div>
+      <div class="card-body" >
+        <div>
+          <h5 class="card-title" style="width: fit-content; font-size: 15px; font-weight: bold;">{{ product.productName }}</h5>
+          <p class="card-text">{{ product.productDescription }}</p>
+          <p class="card-text">{{ product.quantity }}</p>
         </div>
       </div>
     </div>
-  </transition>
-
-
-
-          <!-- Add more data here -->
-        </tr>
-       
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>Index</th>
-          <th>Image</th>
-          <th>Product Name</th>
-          <th>Product Description</th>
-          <th>Product Type</th>
-          <th>Amount</th>
-          <th>Reorder Level</th> 
-          <th>Quantity</th>
-          <th>Status</th>
-          <th>Actions</th>
-          <!-- Add more footers if needed -->
-        </tr>
-      </tfoot>
-    </table>
   </div>
-
-  <!-- Modal section -->
-  <transition name="popup">
-  <div class="popup-mask" v-if="showModal">
-    <div class="popup-wrapper">
-      <div class="popup-dialog">
-        <div class="popup-content" style="max-height: 90vh; overflow-y: auto;">
-          <div class="popup-header" style="display: flex; justify-content: space-between;">
-             <h4 class="popup-title">Add Product</h4>
-            <button @click="showModal = false" type="btn" class="popup-title">&times;</button>
-          </div>
-<div class="popup-body">
-  <form>
-    <div class="form-group d-flex">
-  <label for="productname" class="mr-2" style="width: 120px;">Product Name:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="productname"
-    placeholder="Enter Product Name"
-    v-model="formdata.productName"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="productDescription" class="mr-2" style="width: 120px;">Product Description:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="productDescription"
-    placeholder="Enter Product Desc"
-    v-model="formdata.productDescription"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="productType" class="mr-2" style="width: 120px;">Product Type:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="productType"
-    placeholder="Enter Product Type"
-    v-model="formdata.productType"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="Amount" class="mr-2" style="width: 120px;">Currency:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="Amount"
-    placeholder="Enter Currency"
-    v-model="formdata.currency"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="Amount" class="mr-2" style="width: 120px;">Amount:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="Amount"
-    placeholder="Enter Amount"
-    v-model="formdata.amount"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="ReorderLevel" class="mr-2" style="width: 120px;">Reorder Level:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="ReorderLevel"
-    placeholder="Enter ReorderLevel"
-    v-model="formdata.reorderLevel"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="caterogyName" class="mr-2" style="width: 120px;">Category Name:</label>
-  <select class="form-control" id="storename" v-model="formdata.categoryId" required style="flex: 1; max-width: 200px;">
-    <option value="" disabled selected>Select Category Name</option>
-    <option v-for="subcategory in this.subcategoryBody"  v-bind:value="subcategory.subcategoryID"
-                          :key="subcategory.subcategoryID">{{ subcategory.categoryName }}</option>
- 
-  </select>
-</div>
-<div class="form-group d-flex">
-  <label for="Quantity" class="mr-2" style="width: 120px;">Quantity:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="Quantity"
-    placeholder="Enter Quantity"
-    v-model="formdata.quantity"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class="form-group d-flex">
-  <label for="Quantity" class="mr-2" style="width: 120px;">Price:</label>
-  <input
-    type="text"
-    class="form-control"
-    id="Price"
-    placeholder="Enter Price"
-    v-model="formdata.price"
-    required
-    style="flex: 1; max-width: 200px;"
-  />
-</div>
-<div class=" d-flex">
-  <label for="Currency" class="" style="width: 120px;">Image:</label>
-  <input
-  
-    type="file"
-    class="form-control"
-    id="Currency"
-    placeholder="Enter Currency"
-   @change="onFileChange"
-   accept="image/*"
-    required
-    style="flex: 1; max-width: 200px;height:50px"
-  />
 </div>
 
-
-
-<div class="d-flex justify-content-between">
-
-  <button
-    type="button"
-    class="btn btn-secondary"
-    style=""
-    @click.prevent="cancelAdding()"
-  >
-    Cancel
-  </button>
-  <button
-    type="submit"
-    class="btn btn-primary"
-    style=""
-    @click.prevent="AddingProduct()"
-  >
-    Add Product
-  </button>
-</div>
-
-  </form>
-</div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </transition>
 </template>
 
 <script>
-import swal from "sweetalert2";
 import 'datatables.net-bs4/js/dataTables.bootstrap4.min.js';
 import 'datatables.net';
 import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 import 'datatables.net-bs4';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 
 import $ from "jquery";
 import AppMixins from "../components/Mixins/shared"
 export default {
-  name: "ProductPage",
+  name: "ViewStorePage",
   mixins: [AppMixins],
 
   data() {
     return {
       showModal: false,
-      showPopUp:false,
+      showSubMenu: false,
       formdata: {
-        quantity: "",
-        categoryId: "",
-        reorderLevel: "",
-        amount:"",
-        productType:"",
-        productDescription:"",
-        productName:"",
-        price:"",
-        imageUpload:null,
-        currency:"",
-        selectedProduct:"",
+        Email: "",
+        location: "",
+        website: "",
+        phoneNumber:"",
         storeName:"",
-        storequantity:"",
+        
       },
       allplatformusers:{},
       LoggedInUser:{},
       data_formBody:{},
-      productstore_body:{},
-      subcategoryBody:{},
+      storeDetailsBody:{},
     };
   },
   mounted() {
@@ -528,10 +187,13 @@ export default {
         searching: true,
       });
     });
-  
   },
   methods: {
     
+    toggleSubMenu(event) {
+      event.stopPropagation(); // Stop event propagation to prevent table expansion
+      this.showSubMenu = !this.showSubMenu;
+    },
     onFileChange: function (event) {
   var input = event.target;
   if (input.files && input.files[0]) {
@@ -542,23 +204,10 @@ export default {
     reader.readAsDataURL(input.files[0]);
   }
 },
-getStatusButtonClass(status) {
-    switch (status.toLowerCase()) {
-      case 'available':
-        return 'btn btn-success';
-      case 'out':
-        return 'btn btn-danger';
-      case 'low':
-        return 'btn btn-warning';
-      default:
-        return 'btn btn-secondary';
-    }
-  },
-
-
-    // Close the modal when the user clicks on <span> (x)
-
-
+SelectedStore(storeId) {
+  this.showPopUp = true; // Show the pop-up
+  this.formdata.storeId = storeId; // Set the selected product ID
+},
 
 
 
@@ -571,29 +220,7 @@ hexToBase64(hex) {
 logImageSource(product) {
   console.log('Raw Image Data:', product.imageUpload);
 },
-async gettingSubCategoryByMerchantiD() {
-    try {
-        // Fetch the logged-in user data
-        const loggedInUserResponse = await this.gettingLoggedInUser();
-        const loggedInUser = loggedInUserResponse.body;
-        
-        // Check if loggedInUser has the necessary data
-        if (!loggedInUser || !loggedInUser.userId) {
-            console.error("User data is invalid or missing");
-            return; // Exit function early if user data is missing
-        }
 
-        // Fetch products by merchantId
-        const response = await this.gettingSubCategoryByMerchantID(loggedInUser.userId);
-        this.subcategoryBody = response.body;
-  
-        console.log("Form body: ", this.subcategoryBody);
-        return response;
-    } catch (error) {
-        console.error("Error fetching products by merchantId:", error);
-        return null;
-    }
-},
 
 
   hexToBinary(hex) {
@@ -611,103 +238,7 @@ logImageData(product) {
 
 },
 
-    async AddingProduct() {
-
   
-  var body={
-    productName:this.formdata.productName,
-    productDescription:this.formdata.productDescription,
-    productType:this.formdata.productType,
-    amount:this.formdata.amount,
-    product_ReorderLevel:this.formdata.reorderLevel,
-    stockQuantity:this.formdata.quantity,
-    categoryId:this.formdata.categoryId,
-    imageUpload:this.formdata.imageUpload,
-    price:this.formdata.price,
-    currency:this.formdata.currency,
-
-  
-
-  }
-
-  
-
- console.log("Brand new: ", body);
- var response = await this.addingProducts(body);
-
-if (response.code === "200") {
-  swal.fire({
-    heightAuto: false,
-    html: `<h5 class="text-success" style="font-family:inter;margin-top:22px">${response.message}</h5>`,
-  });
-} else {
-  swal.fire({
-    html: `<h5 class="text-danger" style="font-family:inter;margin-top:22px">${response.message}</h5>`,
-  });
-}
-// Close the modal
-this.showModal = false;
-    },
-    async AttachingProductToStore() {
-  const { selectedProduct, storeName, storequantity } = this.formdata;
-
-  // Log the data before attaching the product to the store
-  console.log("Data pulled for attaching store:", {
-    storeId: storeName,
-    productId: selectedProduct,
-    quantity: storequantity,
-  });
-
-  
-  try {
-    // Call the method from mixins with the body object
-    const response = await this.attachingstoreToProduct(storeName,selectedProduct,storequantity);
-
-    if (response.code === "200") {
-      swal.fire({
-        heightAuto: false,
-        html: `<h5 class="text-success" style="font-family:inter;margin-top:22px">${response.message}</h5>`,
-      });
-    } else {
-      swal.fire({
-        html: `<h5 class="text-danger" style="font-family:inter;margin-top:22px">${response.message}</h5>`,
-      });
-    }
-
-    this.showPopUp = false; // Close the pop-up
-  } catch (error) {
-    console.error("Error attaching product to store:", error);
-    swal.fire({
-      html: `<h5 class="text-danger" style="font-family:inter;margin-top:22px">Error attaching product to store</h5>`,
-    });
-  }
-},
-
-    async gettingStoreByMerchantid() {
-    try {
-        // Fetch the logged-in user data
-        const loggedInUserResponse = await this.gettingLoggedInUser();
-        const loggedInUser = loggedInUserResponse.body;
-        
-        // Check if loggedInUser has the necessary data
-        if (!loggedInUser || !loggedInUser.userId) {
-            console.error("User data is invalid or missing");
-            return; // Exit function early if user data is missing
-        }
-
-        // Fetch stores by merchantId
-        const response = await this.gettingStoreByLoggedInUser(loggedInUser.userId);
-        this.productstore_body = response.body;
-  
-        console.log("Store body is:", this.productstore_body);
-        return response;
-    } catch (error) {
-        console.error("Error fetching stores by merchantId:", error);
-        return null;
-    }
-},
-
- 
 async gettingAllUsers(){
 
 const response= await this.GettingAllPlatformUsers();
@@ -736,55 +267,43 @@ async gettingLoggedInUser(){
   return response;
   
   },
-  SelectedProducts(productID) {
-  this.showPopUp = true; // Show the pop-up
-  this.formdata.selectedProduct = productID; // Set the selected product ID
-},
+  async gettingProductsAttachedToStore(storeId) {
+      try {
+        // Call the gettingStoredetails method from the mixin
+        const storeDetails = await this.gettingStoredetails(storeId);
+        // Do something with storeDetails if needed
+        console.log('Store details:', storeDetails);
+        this.storeDetailsBody=storeDetails.body;
+        console.log("store details are",this.storeDetailsBody);
 
-  async gettingProductByMerchantId() {
-    try {
-        // Fetch the logged-in user data
-        const loggedInUserResponse = await this.gettingLoggedInUser();
-        const loggedInUser = loggedInUserResponse.body;
-        
-        // Check if loggedInUser has the necessary data
-        if (!loggedInUser || !loggedInUser.userId) {
-            console.error("User data is invalid or missing");
-            return; // Exit function early if user data is missing
-        }
-
-        // Fetch products by merchantId
-        const response = await this.gettingproductByMerchantId(loggedInUser.userId);
-        this.data_formBody = response.body;
+        // Other logic related to getting products attached to the store
+      } catch (error) {
+        console.error('Error getting products attached to store:', error);
+        throw error;
+      }
+    },
   
-        console.log("Form body: ", this.data_formBody);
-        console.log("product id is ",this.data_formBody.productID);
-        return response;
-    } catch (error) {
-        console.error("Error fetching products by merchantId:", error);
-        return null;
-    }
+  },
+  created() {
+    // Get the current URL
+    const url = window.location.href;
+
+    // Split the URL by '/' to extract the parts
+    const parts = url.split('/');
+
+    // The store ID should be the last part of the URL
+    const storeId = parts[parts.length - 1];
+
+    // Assign the extracted storeId to this.id
+    this.id = storeId;
+
+    console.log("store id is ", this.id);
+
+    // Now, you can use this.id to fetch the products attached to the store
+    this.gettingProductsAttachedToStore(this.id);
+    // Add a semicolon here
 },
-  },
-  created(){
-    console.log('Initial imageData:', this.formdata.imageUpload);
-    this.gettingAllUsers();
-    this.gettingLoggedInUser();
-    this.gettingStoreByMerchantid();
-    this.gettingSubCategoryByMerchantiD();
-    this.gettingProductByMerchantId().then(() => {
-  // Call logImageData for each product
-  this.data_formBody.forEach(product => {
-    this.logImageData(product); // Pass 'product' as a parameter here
-  });
-}).catch(error => {
-  console.error("Error fetching products:", error);
-});
 
-// Add a semicolon here
-
-
-  },
 
 };
 </script>
@@ -793,9 +312,6 @@ async gettingLoggedInUser(){
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap");
-@import url("https://code.jquery.com/jquery-3.5.1.slim.min.js");
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js");
-@import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js");
 
 :root {
   --color-black: #41423d;
@@ -879,35 +395,29 @@ async gettingLoggedInUser(){
 .table-wrapper {
   margin-bottom: 20px;
 }
-.navbar-nav .nav-link {
-  color: #fff;
+
+.dropdown-submenu {
+  position: relative;
 }
-.dropend .dropdown-toggle {
-  color: salmon;
-  margin-left: 1em;
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
 }
-.dropdown-item:hover {
-  background-color: lightsalmon;
-  color: #fff;
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
 }
-.dropdown .dropdown-menu {
-  display: none;
-}
-.dropdown:hover > .dropdown-menu,
-.dropend:hover > .dropdown-menu {
-  display: block;
-  margin-top: 0.125em;
-  margin-left: 0.125em;
-}
-@media screen and (min-width: 769px) {
-  .dropend:hover > .dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
-  .dropend .dropdown-toggle {
-    margin-left: 0.5em;
-  }
+.store-link {
+  color: blue; /* Change color to suit your design */
+  text-decoration: underline; /* Underline to signify it's a link */
+  cursor: pointer;
+  width: fit-content; /* Change cursor to pointer on hover */
 }
 
 
